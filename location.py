@@ -1,8 +1,10 @@
 class Location:
     def __init__(self):
         self.location_de_wandering = {}
+        
     def add_wandering(self, wandering, location):
         self.location_wandering[wandering] = location
+
     def move_wandering(self, wandering):
         delta_x, delta_y = wandering.walk()
         location_now = self.location_wandering(wandering)
