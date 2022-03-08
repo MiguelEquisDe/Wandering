@@ -1,10 +1,12 @@
 import random
-
-class Wandering:
+ 
+class  wandering:
     def __init__(self, name):
         self.name = name
-class ComunWandering(Wandering):
+       
+class ComunWandering(wandering):
     def __init__(self, name):
         super().__init__(name)
-        def walk(self):
-            return random.choice([(0,2)(0,-2)(2,0)(-2,0)])
+       
+    def walk(self):
+        return random.choice([(0,2),(0,-2),(2,0),(-2,0)])
