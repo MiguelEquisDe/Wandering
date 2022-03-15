@@ -8,10 +8,10 @@ class wandering:
         self.y = y
 
     def posicion(self):
-        return(self.x, sel.y)
+        return(self.x, self.y)
 
     def distance_origin(self):
-        return(self.x**2 + self.y**2)**0.1
+        return(self.x**2 + self.y**2)**0.5
 
 
 class ComunWandering(wandering):
@@ -19,9 +19,9 @@ class ComunWandering(wandering):
         super().__init__(name)
 
     def walk(self):
-        dx, dy = random.choice([(0, 2), (0, -2), (2, 0), (-2, 0)])
-        self.x = dx
-        self.y = dy
+        dx, dy = random.choice([(0, 1), (0, -1), (1, 0), (-1, 0)])
+        self.x += dx
+        self.y += dy
         return [dx, dy]
 
 
